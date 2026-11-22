@@ -1,0 +1,3 @@
+# Managed by flapjack (overlay base). /etc/sudoers.d is exclusive: any other
+# file placed here is removed on the next apply.
+%wheel ALL=(ALL) ALL

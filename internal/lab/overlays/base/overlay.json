@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "/etc/chrony.conf": {"onChange": ["systemctl try-restart chronyd"]},
+    "/etc/ssh/sshd_config.d/*": {"mode": "0600", "onChange": ["systemctl try-reload-or-restart sshd"]},
+    "/etc/sudoers.d/*": {"mode": "0440"},
+    "/root/.ssh/authorized_keys": {"mode": "0600"},
+    "/etc/motd": {"policy": "report"}
+  },
+  "directories": {
+    "/root/.ssh": {"mode": "0700"}
+  },
+  "exclusive": ["/etc/sudoers.d"]
+}

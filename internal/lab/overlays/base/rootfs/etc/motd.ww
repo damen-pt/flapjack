@@ -1,0 +1,4 @@
+
+  {{.Node.Name}} · rack {{.Node.Rack}} · class {{.Class.Name}} · image {{.Class.Image}}
+  Managed by flapjack. Overlays: {{join .Class.Overlays ", "}}
+

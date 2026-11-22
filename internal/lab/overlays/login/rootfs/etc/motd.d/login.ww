@@ -1,0 +1,10 @@
+
+  {{.Node.Name}}: login node of the Flapjack lab. Homes are shared from
+  the head over NFS ({{index .Node.Labels "head"}}:/c/home); every compute node
+  sees the same /c/home.
+
+    sinfo                                 the cluster
+    sbatch --wrap 'hostname > out.$SLURM_JOB_ID'; squeue
+    srun -N2 --chdir ~ pwd                jobs start in your home, on any node
+    ls ~/                                 your job output, written by the nodes
+

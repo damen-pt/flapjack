@@ -1,0 +1,6 @@
+# Managed by flapjack (overlay base): time comes from the head node, or
+# from the rack's tentacle when the node sits behind one.
+server {{with label .Node "tentacle"}}{{.}}{{else}}{{.Server}}{{end}} iburst
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync

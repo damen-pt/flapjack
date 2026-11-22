@@ -1,0 +1,6 @@
+{
+  "paths": {
+    "/etc/systemd/system/slurmd.service.d/*": {"onChange": ["systemctl daemon-reload"]},
+    "/etc/motd.d/*": {"policy": "report"}
+  }
+}

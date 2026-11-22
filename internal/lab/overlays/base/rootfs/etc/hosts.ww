@@ -1,0 +1,10 @@
+# Managed by flapjack (overlay base). Local edits are reverted.
+{{- /* Nodes are named by their cluster-network address when they have
+     one; the head by the "head" label when the node reaches it somewhere
+     other than flapjack's own address (behind a tentacle). */}}
+{{- $head := .Server}}{{with label .Node "head"}}{{$head = .}}{{end}}
+127.0.0.1   localhost localhost.localdomain
+::1         localhost localhost.localdomain
+{{$head}}  head.{{.Domain}} head
+{{range .Nodes}}{{$ip := .IP}}{{range .Interfaces}}{{if eq .Network "cluster"}}{{$ip = .IP}}{{end}}{{end}}{{$ip}}  {{.Name}}.{{$.Domain}} {{.Name}}
+{{end -}}
