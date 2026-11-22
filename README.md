@@ -1,4 +1,9 @@
+<p align ="center">
 <img src="assets/flapjack.png" width="128" height="128" alt="Flapjack logo: a flapjack octopus">
+</p>
+
+**Development**
+Note: Flapjack is currently in testing. Do not use in production 
 
 # flapjack
 
