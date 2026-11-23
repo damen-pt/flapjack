@@ -190,6 +190,9 @@ behind it.
   Flapjack
 - [Overlays by example](docs/overlay-use-cases.md): templates or Nix for
   Slurm, PBS, Lmod, project environments, reserved nodes and RKE2
+- [Compliance on demand](examples/compliance/README.md): CIS L1/L2, DISA
+  STIG, PCI DSS 4.0 and HIPAA as a Nix overlay a node joins with a label,
+  verified by OpenSCAP
 - [Architecture](docs/ARCHITECTURE.md): design decisions and feature status
 - [Tentacles](docs/design/tentacles.md): the per-rack fan-out design, its
   security model and test topology; setup is in the

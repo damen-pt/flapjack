@@ -1,0 +1,11 @@
+{
+  "release": "9",
+  "packages": [
+    "audit", "audispd-plugins", "rsyslog", "rsyslog-gnutls",
+    "aide", "usbguard", "firewalld", "authselect", "libpwquality", "crypto-policies-scripts",
+    "openscap-scanner", "scap-security-guide",
+    "nfs-utils", "munge", "slurm-slurmd"
+  ],
+  "services": ["sshd", "chronyd", "NetworkManager", "auditd", "rsyslog", "munge", "slurmd"],
+  "selinux": true
+}
